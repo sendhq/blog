@@ -1,0 +1,34 @@
+.navbar-button {
+    color: grey;
+    font-size: 14px;
+    text-align: center;
+}
+
+.navbar-button:hover {
+    color: #ffffff
+}
+
+.nav-section-header {
+    font-weight: 600;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.copyright {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: left;
+    font-size: 14px;
+    color: grey;
+}
+
+.send {
+    padding-top: 10px;
+    text-align: left;
+    font-size: 14px;
+    color: grey;
+}
+
+.light-text {
+    color: lightgrey;
+}
