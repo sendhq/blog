@@ -5,6 +5,9 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import facebook from '../img/social/facebook.svg'
+import twitter from '../img/social/twitter.svg'
+import linkedin from '../img/social/linkedin.svg'
 
 export const BlogPostTemplate = ({
   content,
@@ -13,9 +16,17 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  slug
 }) => {
   const PostContent = contentComponent || Content
-
+  
+  const baseURL = `https://blog.send.ng${slug}`
+  const fb = `https://www.facebook.com/sharer/sharer.php?u=${baseURL}`
+  const twitterLink = `https://twitter.com/share?url=${baseURL}&text=${title}&via=sendDelivery`
+  const linkedinLink = `https://www.linkedin.com/shareArticle?url=${baseURL}`
+  const handleLinkClick = (link) => {
+    window.open(link, "_blank")
+  }
   return (
     <section className="section">
       {helmet || ''}
@@ -39,6 +50,33 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
+          
+            <div style={{position:'fixed', right:30, top:'30%', justifyContent:'center', alignItems:'center', textAlign:'center'}} className="column">
+                <h3>Share via</h3>
+                <div onClick={() => handleLinkClick(fb)}>
+                  <img
+                    src={facebook}
+                    alt="Facebook"
+                    className="icon"
+                  />
+                </div>
+                <div onClick={()=> handleLinkClick(twitterLink)}>
+                  <img
+                    className="fas fa-lg"
+                    src={twitter}
+                    className="icon"
+                    alt="Twitter"
+
+                  />
+                </div>
+                <div onClick={()=> handleLinkClick(linkedinLink)} >
+                  <img
+                    src={linkedin}
+                    className="icon"
+                    alt="Linkedin"
+                  />
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -52,11 +90,11 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  slug: PropTypes.string
 }
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-
   return (
     <Layout>
       <BlogPostTemplate
@@ -74,6 +112,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        slug={post.fields.slug}
       />
     </Layout>
   )
@@ -92,6 +131,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
