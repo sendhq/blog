@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({
   slug
 }) => {
   const PostContent = contentComponent || Content
-  
+
   const baseURL = `https://blog.send.ng${slug}`
   const fb = `https://www.facebook.com/sharer/sharer.php?u=${baseURL}`
   const twitterLink = `https://twitter.com/share?url=${baseURL}&text=${title}&via=sendDelivery`
@@ -53,23 +53,22 @@ export const BlogPostTemplate = ({
           
             <div style={{position:'fixed', right:30, top:'30%', justifyContent:'center', alignItems:'center', textAlign:'center'}} className="column">
                 <h3>Share via</h3>
-                <div onClick={() => handleLinkClick(fb)}>
+                <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(twitterLink)} onClick={() => handleLinkClick(fb)}>
                   <img
                     src={facebook}
                     alt="Facebook"
                     className="icon"
                   />
                 </div>
-                <div onClick={()=> handleLinkClick(twitterLink)}>
+                <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(twitterLink)} onClick={()=> handleLinkClick(twitterLink)}>
                   <img
-                    className="fas fa-lg"
+                    className="fas fa-lg icon"
                     src={twitter}
-                    className="icon"
                     alt="Twitter"
 
                   />
                 </div>
-                <div onClick={()=> handleLinkClick(linkedinLink)} >
+                <div tabIndex={0} role="button" onKeyPress={()=> handleLinkClick(twitterLink)} onClick={()=> handleLinkClick(linkedinLink)} >
                   <img
                     src={linkedin}
                     className="icon"
