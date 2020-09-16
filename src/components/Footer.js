@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../img/logo.png'
+import logo from '../img/logo.svg'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
@@ -9,11 +9,11 @@ import './custom.css'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
+      <footer className="myFooter">
         <div className="content container">
-        <div style={{ maxWidth: '100vw', borderBottom:'1px solid grey', paddingBottom:40 }} className="columns">
+        <div style={{ maxWidth: '100vw', borderBottom:'1px solid rgba(255,255,255,.2)', paddingBottom:40 }} className="columns">
           <div className="column is-6"> 
-            <h1 style={{ color: 'lightgrey'}}>We're here to help</h1>
+            <h1 style={{ color: 'white'}}>We're here to help</h1>
           </div>
           <div className="column is-6"> 
             <p className="light-text">Contact our support team anytime. You can also ask us for the scores of a football match, if that's your thing.</p>
@@ -26,9 +26,9 @@ const Footer = class extends React.Component {
         </div>
         </div>
 
-        <div className="content has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-           <div style={{ maxWidth: '100vw',  borderBottom:'1px solid grey', }} className="columns">
+        <div className="content ">
+          <div className="container  has-text-white-ter">
+           <div style={{ maxWidth: '100vw',  borderBottom:'1px solid rgba(255,255,255,.2)', }} className="columns">
             <div className="column is-6">
               <div className="container">
               <img alt="Send logo" src={logo} style={{width:100}} />

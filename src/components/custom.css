@@ -1,5 +1,11 @@
+
+.myFooter {
+    padding-top: 50px;
+    background-color: #0747a6;
+}
+
 .navbar-button {
-    color: grey;
+    color: rgba(255,255,255,.8);
     font-size: 14px;
     text-align: center;
 }
@@ -10,7 +16,8 @@
 
 .nav-section-header {
     font-weight: 600;
-    color: gray;
+    color: #ffffff;
+    opacity: 0.5;
     text-transform: uppercase;
 }
 
@@ -19,16 +26,19 @@
     padding-bottom: 30px;
     text-align: left;
     font-size: 14px;
-    color: grey;
+    color: #ffffff;
+    opacity: 0.6;
 }
 
 .send {
     padding-top: 10px;
     text-align: left;
     font-size: 14px;
-    color: grey;
+    color: #ffffff;
+    opacity: 0.6;
 }
 
 .light-text {
-    color: lightgrey;
+    color: #ffffff;
+    opacity: 0.8;
 }
