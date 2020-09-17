@@ -49,3 +49,36 @@
     cursor:pointer;
     margin-top: 5px;
 }
+
+.more { 
+	background: #0847a6 !important;
+	color: white !important;
+	 border: none !important;
+	font-size: 11px !important;
+	width: 8rem !important;
+	height: 45px !important;
+}
+
+.more:hover { 
+	opacity: 0.8;
+}
+
+.custom-item	{
+	background-color: rgb(255 255 255 / 20%) !important
+}
+
+.custom-title {
+	font-size: 16px !important;
+    color: #0847a6 !important;
+    text-decoration: none !important;
+}
+
+.custom-title:hover {
+    opacity: 0.8;
+}
+
+.custom-subtitle {
+	font-size: 12px !important;
+    margin-top: 6px; 
+	color: #000000c7 !important;
+}
