@@ -8,7 +8,7 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout>
         <div
-          className="full-width-image-container margin-top-0"
+          className="full-width-image-container margin-top-20"
           style={{
             backgroundImage: `url('/img/blog-index.jpg')`,
           }}
@@ -16,13 +16,14 @@ export default class BlogIndexPage extends React.Component {
           <h1
             className="has-text-weight-bold is-size-1"
             style={{
-              boxShadow: '0.5rem 0 0 #0847a6, -0.5rem 0 0 #0847a6',
-              backgroundColor: '#0847a6',
               color: 'white',
-              padding: '1rem',
+              padding: '10px',
+              height: 'fit-content',
+              fontSize: '27px !important',
+              borderRadius:' 3px'
             }}
           >
-            Stories We Tell
+            Blog
           </h1>
         </div>
         <section className="section">

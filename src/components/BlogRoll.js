@@ -31,7 +31,7 @@ class BlogRoll extends React.Component {
                   ) : null}
                   <p className="post-meta">
                     <Link
-                      className="title custom-title is-size-4"
+                      className="title custom-title"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
@@ -42,7 +42,7 @@ class BlogRoll extends React.Component {
                     </span>
                   </p>
                 </header>
-                <p>
+                <p style={{fontSize:14}}>
                   {post.excerpt}
                   <br />
                   <br />
